@@ -1,0 +1,38 @@
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.timeline-item .circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ccc;
+    display: inline-block;
+}
+
+.timeline-item.active .circle {
+    border: 4px solid blue;
+    background: white;
+}
